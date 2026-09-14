@@ -4,9 +4,11 @@ using System.Text;
 
 namespace UzdevumuParvaldnieksKlases
 {
-    public class AtkartojossUzdevums : Uzdevums
+    public enum AtkartosanasBiezumsEnum
     {
-
-        public AtkartosanasBiezumsEnum AtkartosanasBiezums { get; set; }
+        Diena,
+        Nedela,
+        Menesis,
+        Gads
     }
 }

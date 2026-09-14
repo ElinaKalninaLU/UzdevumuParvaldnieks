@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="UzdevumuParvaldnieksKlases/UzdevumuParvaldnieksKlases.csproj" />
   <Project Path="UzdevumuParvaldnieksKonsole/UzdevumuParvaldnieksKonsole.csproj" />
+  <Project Path="UzdevumuTestData/UzdevumuTestData.csproj" Id="d4d5baa3-24e2-4f46-aeb3-296a3000d517" />
 </Solution>
