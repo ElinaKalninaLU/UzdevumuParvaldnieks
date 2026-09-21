@@ -12,5 +12,11 @@ namespace UzdevumuTestData
         string ReturnTestData();
 
         IEnumerable<Uzdevums> GetTestData();
+
+        bool AddTestData(Uzdevums uzd);
+
+        bool UpdateTestData(Uzdevums uzd);
+
+        bool DeleteTestData(Uzdevums uzd);
     }
 }

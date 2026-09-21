@@ -52,5 +52,27 @@ namespace UzdevumuTestData
             }
             return true;
         }
+
+        public bool AddTestData(Uzdevums uzd)
+        {
+            testData.Add(uzd);
+            return true;
+        }
+
+        public bool UpdateTestData(Uzdevums uzd)
+        {
+            if (testData.Contains(uzd))
+            {
+                int index = testData.IndexOf(uzd);
+                testData[index] = uzd;
+                return true;
+            }
+            return false;
+        }
+
+        public bool DeleteTestData(Uzdevums uzd)
+        {
+            return testData.Remove(uzd);
+        }
     }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UzdevumuParvaldnieksMAUI.Views.EditUzdevums"
+             Title="EditUzdevums">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Text="Nosaukums:" />
+        <Editor Grid.Column="1" Grid.Row="0" Text="{Binding Nosaukums}" />
+        <Label Text="Apraksts:" Grid.Row="1" />
+        <Editor Grid.Column="1" Grid.Row="1" Text="{Binding Apraksts}" />
+        <Label Text="Atkārtošanās biežums:" Grid.Row="2" />
+        <Picker Grid.Column="1" Grid.Row="2" ItemsSource="{Binding atkartosanasBiezumsList}" SelectedItem="{Binding AtkartosanasBiezums}" />
+
+        <Button Grid.Row="3" Grid.Column="1" Text="Pievienot" Command="{Binding PievienotCommand}" IsVisible="True" >
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding vaiEdit}" Value="True">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</ContentPage>

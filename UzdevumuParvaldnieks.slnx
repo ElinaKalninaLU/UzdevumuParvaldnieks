@@ -1,5 +1,8 @@
 <Solution>
   <Project Path="UzdevumuParvaldnieksKlases/UzdevumuParvaldnieksKlases.csproj" />
   <Project Path="UzdevumuParvaldnieksKonsole/UzdevumuParvaldnieksKonsole.csproj" />
+  <Project Path="UzdevumuParvaldnieksMAUI/UzdevumuParvaldnieksMAUI.csproj" Id="0de92f0a-d2d9-4ed4-b40a-677a133fd728">
+    <Deploy Solution="Debug|*" />
+  </Project>
   <Project Path="UzdevumuTestData/UzdevumuTestData.csproj" Id="d4d5baa3-24e2-4f46-aeb3-296a3000d517" />
 </Solution>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="UzdevumuParvaldnieksMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UzdevumuParvaldnieksMAUI"
+    xmlns:views="clr-namespace:UzdevumuParvaldnieksMAUI.Views"
+    Title="UzdevumuParvaldnieksMAUI">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+      Title="Uzdevumu saraksts"
+      ContentTemplate="{DataTemplate views:UzdevumuSaraksts}"
+      Route="UzdevumuSaraksts" />
+
+    <ShellContent
+      Title="Jauns uzdevums"
+      ContentTemplate="{DataTemplate views:EditUzdevums}"
+      Route="EditUzdevums" />
+
+</Shell>

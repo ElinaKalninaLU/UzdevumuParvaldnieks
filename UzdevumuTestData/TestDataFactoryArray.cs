@@ -8,11 +8,13 @@ namespace UzdevumuTestData
     public class TestDataFactoryArray : ITestDataFactory
     {
         private Uzdevums[] testData;
+        private int uzdCount = 0;
         public void CreateTestData()
         {
-            testData = new Uzdevums[2];
+            testData = new Uzdevums[10];
             testData[0] = new Uzdevums(1, "Pirmais uzdevums", "Apraksts par pirmo uzdevumu");
             testData[1] = new Uzdevums(2, "Otrais uzdevums", "Apraksts par otro uzdevumu");
+            uzdCount = 2;
         }
 
         public string ReturnTestData()
@@ -28,6 +30,27 @@ namespace UzdevumuTestData
         public IEnumerable<Uzdevums> GetTestData()
         {
             return testData;
+        }
+
+        public bool AddTestData(Uzdevums uzd)
+        {
+            if (uzdCount < testData.Length)
+            {
+                testData[uzdCount] = uzd;
+                uzdCount++;
+                return true;
+            }
+            return false;
+        }
+
+        public bool UpdateTestData(Uzdevums uzd)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteTestData(Uzdevums uzd)
+        {
+            throw new NotImplementedException();
         }
     }
 }
