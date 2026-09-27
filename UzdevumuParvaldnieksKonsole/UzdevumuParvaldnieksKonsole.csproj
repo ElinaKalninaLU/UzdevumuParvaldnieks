@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UzdevumuParvaldnieksKlases\UzdevumuParvaldnieksKlases.csproj" />
-    <ProjectReference Include="..\UzdevumuTestData\UzdevumuTestData.csproj" />
   </ItemGroup>
 
 </Project>

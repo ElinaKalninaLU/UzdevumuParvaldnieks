@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UzdevumuTestData
+namespace UzdevumuParvaldnieksTestData
 {
     public interface ISaveLoad
     {
-       string FileName { get; set; }
+        string FileName { get; set; }
 
         bool SaveToFile();
 

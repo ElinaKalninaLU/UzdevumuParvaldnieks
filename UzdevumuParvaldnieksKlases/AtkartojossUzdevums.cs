@@ -6,7 +6,6 @@ namespace UzdevumuParvaldnieksKlases
 {
     public class AtkartojossUzdevums : Uzdevums
     {
-
         public AtkartosanasBiezumsEnum AtkartosanasBiezums { get; set; }
     }
 }
