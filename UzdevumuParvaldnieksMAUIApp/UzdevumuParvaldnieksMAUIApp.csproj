@@ -71,7 +71,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModels\" />
+	  <ProjectReference Include="..\UzdevumuParvaldnieksKlases\UzdevumuParvaldnieksKlases.csproj" />
+	  <ProjectReference Include="..\UzdevumuParvaldnieksTestData\UzdevumuParvaldnieksTestData.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
