@@ -2,12 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UzdevumuParvaldnieksMAUIApp.Views.UzdevumuSaraksts"
-             Title="UzdevumuSaraksts">
+             x:Name="UzdevumuSarakstsLapa"
+             Title="UzdevumuSaraksts" >
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Uzdevumu saraksts"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button
+            Text="Pievienot uzdevumu"
+            Command="{Binding PievienotUzdevumuCommand}" />
         <CollectionView
             ItemsSource="{Binding Uzdevumi}">
             <CollectionView.ItemTemplate>
@@ -17,6 +21,9 @@
                             <Label Text="{Binding Nosaukums}" FontAttributes="Bold" />
                             <Label Text="{Binding Apraksts}" />
                             <Label Text="{Binding Termiņš, StringFormat='Termiņš: {0:dd.MM.yyyy}'}" />
+                            <Button Text="Labot" Command="{Binding Source={x:Reference UzdevumuSarakstsLapa}, Path=BindingContext.LabotUzdevumuCommand}" CommandParameter="{Binding .}" />
+                            <Button Text="Dzēst" Command="{Binding Source={x:Reference UzdevumuSarakstsLapa}, Path=BindingContext.DzestUzdevumuCommand}" CommandParameter="{Binding .}"/>
+
                         </StackLayout>
                     </Frame>
                 </DataTemplate>

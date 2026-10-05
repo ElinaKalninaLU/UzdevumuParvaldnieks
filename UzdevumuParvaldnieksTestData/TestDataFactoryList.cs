@@ -11,14 +11,23 @@ namespace UzdevumuTestData
     {
         private List<Uzdevums> testData;
 
-        private string fileName;
+        private string fileName = "test_data.json";
             public string FileName { get => fileName; set => fileName = value; }
 
             public void CreateTestData()
         {
             testData = new List<Uzdevums>();
-            testData.Add(new Uzdevums(1, "Pirmais uzdevums", "Apraksts par pirmo uzdevumu"));
-            testData.Add(new Uzdevums(2, "Otrais uzdevums", "Apraksts par otro uzdevumu"));
+            if (!File.Exists(FileName))
+            {
+                testData.Add(new Uzdevums(1, "Pirmais uzdevums", "Apraksts par pirmo uzdevumu"));
+                testData.Add(new Uzdevums(2, "Otrais uzdevums", "Apraksts par otro uzdevumu"));
+
+                SaveToFile();
+            }
+            else
+            {
+                LoadFromFile();
+            }
         }
 
         public string ReturnTestData()
@@ -57,6 +66,7 @@ namespace UzdevumuTestData
         public bool AddTestData(Uzdevums uzd)
         {
             testData.Add(uzd);
+            SaveToFile();
             return true;
         }
 
@@ -66,6 +76,7 @@ namespace UzdevumuTestData
             {
                 int index = testData.IndexOf(uzd);
                 testData[index] = uzd;
+                SaveToFile();
                 return true;
             }
             return false;
@@ -73,7 +84,13 @@ namespace UzdevumuTestData
 
         public bool DeleteTestData(Uzdevums uzd)
         {
-            return testData.Remove(uzd);
+
+            bool result = testData.Remove(uzd);
+            if (result)
+            {
+                SaveToFile();
+            }
+            return result;
         }
     }
 }
