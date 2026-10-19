@@ -7,8 +7,13 @@
 
         public String Nosaukums { get; set; }
 
-       // public int ID { get {  return _ID; } }
-        public int ID => _ID;
+        // public int ID { get {  return _ID; } }
+        public int ID
+        {
+            get { return _ID; }
+            set { _ID = value; }
+        }
+
 
         private string _apraksts;
 

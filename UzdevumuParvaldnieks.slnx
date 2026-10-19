@@ -3,4 +3,5 @@
   <Project Path="UzdevumuParvaldnieksKonsole/UzdevumuParvaldnieksKonsole.csproj" />
   <Project Path="UzdevumuParvaldnieksMAUIApp/UzdevumuParvaldnieksMAUIApp.csproj" Id="e965f0f4-653b-4785-96d0-931fa9e52a9a" />
   <Project Path="UzdevumuParvaldnieksTestData/UzdevumuParvaldnieksTestData.csproj" Id="336d6631-3f24-458e-b895-161fd82be1b1" />
+  <Project Path="UzdevumuParvaldnieksWebAPI/UzdevumuParvaldnieksWebAPI.csproj" Id="eb57451e-71ae-4b78-8072-9821603e7cde" />
 </Solution>

@@ -42,6 +42,10 @@ namespace UzdevumuTestData
 
         public IEnumerable<Uzdevums> GetTestData()
         {
+            if (testData == null)
+            {
+                CreateTestData();
+            }
             return testData;
         }
 
@@ -72,10 +76,11 @@ namespace UzdevumuTestData
 
         public bool UpdateTestData(Uzdevums uzd)
         {
-            if (testData.Contains(uzd))
+            Uzdevums u1 = testData.Where(u => u.ID == uzd.ID).First();
+            if (u1 != null)
             {
-                int index = testData.IndexOf(uzd);
-                testData[index] = uzd;
+                u1.Nosaukums = uzd.Nosaukums;
+                u1.Apraksts = uzd.Apraksts;
                 SaveToFile();
                 return true;
             }
@@ -91,6 +96,15 @@ namespace UzdevumuTestData
                 SaveToFile();
             }
             return result;
+        }
+
+        public Uzdevums GetTestDataItem(int id)
+        {
+            if (testData == null)
+            {
+                CreateTestData();
+            }
+            return testData.FirstOrDefault(u => u.ID == id);
         }
     }
 }

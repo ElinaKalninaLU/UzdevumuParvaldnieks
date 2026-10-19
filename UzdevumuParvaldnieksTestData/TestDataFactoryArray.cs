@@ -52,5 +52,10 @@ namespace UzdevumuTestData
         {
             throw new NotImplementedException();
         }
+
+        public Uzdevums GetTestDataItem(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

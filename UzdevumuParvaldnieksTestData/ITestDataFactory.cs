@@ -13,6 +13,8 @@ namespace UzdevumuTestData
 
         IEnumerable<Uzdevums> GetTestData();
 
+        Uzdevums GetTestDataItem(int id);
+
         bool AddTestData(Uzdevums uzd);
 
         bool UpdateTestData(Uzdevums uzd);

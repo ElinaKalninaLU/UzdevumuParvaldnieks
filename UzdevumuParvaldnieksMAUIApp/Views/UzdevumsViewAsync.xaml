@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UzdevumuParvaldnieksMAUIApp.Views.UzdevumsViewAsync"
+             Title="UzdevumsView">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Text="Nosaukums:" Grid.Row="0" Grid.Column="0" />
+        <Entry Text="{Binding Nosaukums}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" />
+        <Label Text="Apraksts:" Grid.Row="1" Grid.Column="0" />
+        <Editor Text="{Binding Apraksts}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+        <Button Text="Saglabāt" Command="{Binding SaglabatCommand}" Grid.Row="2" Grid.Column="1" />
+        <Button Text="Atcelt" Command="{Binding AtceltCommand}" Grid.Row="2" Grid.Column="2" />
+    </Grid>
+</ContentPage>

@@ -4,11 +4,11 @@ namespace UzdevumuParvaldnieksMAUIApp.Views;
 
 public partial class UzdevumuSaraksts : ContentPage
 {
-    private IUzdevumuSarakstsViewModel vm;
-    public UzdevumuSaraksts(IUzdevumuSarakstsViewModel viewModel)
-	{
-		InitializeComponent();
-		BindingContext = viewModel;
+    private UzdevumuSarakstsViewModelAsync vm;
+    public UzdevumuSaraksts(UzdevumuSarakstsViewModelAsync viewModel)
+    {
+        InitializeComponent();
+        BindingContext = viewModel;
         vm = viewModel;
     }
 
@@ -16,6 +16,7 @@ public partial class UzdevumuSaraksts : ContentPage
     {
         base.OnAppearing();
 
-        vm.Ieladet();
+        if (BindingContext is UzdevumuSarakstsViewModelAsync vm)
+            await vm.Ieladet();
     }
 }

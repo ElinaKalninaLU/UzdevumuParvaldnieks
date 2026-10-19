@@ -1,0 +1,10 @@
+@UzdevumuParvaldnieksWebAPI_HostAddress = https://localhost:7078
+
+GET {{UzdevumuParvaldnieksWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{UzdevumuParvaldnieksWebAPI_HostAddress}}/weatherforecast
+
+###
