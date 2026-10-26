@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="UzdevumuParvaldnieksDB/UzdevumuParvaldnieksDB.csproj" Id="efd46f46-5d30-4cf2-9d9e-c738bb2f5f80" />
   <Project Path="UzdevumuParvaldnieksKlases/UzdevumuParvaldnieksKlases.csproj" />
   <Project Path="UzdevumuParvaldnieksKonsole/UzdevumuParvaldnieksKonsole.csproj" />
   <Project Path="UzdevumuParvaldnieksMAUIApp/UzdevumuParvaldnieksMAUIApp.csproj" Id="e965f0f4-653b-4785-96d0-931fa9e52a9a" />
