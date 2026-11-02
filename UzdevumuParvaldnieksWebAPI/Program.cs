@@ -1,5 +1,8 @@
 using System.Diagnostics;
+using UzdevumParvaldnieksSQLite;
+using UzdevumuParvaldnieksDB;
 using UzdevumuParvaldnieksKlases;
+using UzdevumParvaldnieksSQLite;
 using UzdevumuParvaldnieksTestData;
 using UzdevumuTestData;
 
@@ -10,7 +13,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<ITestDataFactory, TestDataFactoryList>();
+//builder.Services.AddSingleton<ITestDataFactory, TestDataFactoryList>();
+//Web Service ar Db
+builder.Services.AddSingleton<UzvevumiContext>();
+builder.Services.AddSingleton<ITestDataFactory, TestDataFactoryDB>();
+////Web Service ar SQLite
+//builder.Services.AddSingleton<ITestDataFactory, TestDataFactorySQLite>();
+
+
 
 var app = builder.Build();
 

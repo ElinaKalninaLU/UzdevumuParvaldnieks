@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UzdevumuParvaldnieksKlases\UzdevumuParvaldnieksKlases.csproj" />
+    <ProjectReference Include="..\UzdevumuParvaldnieksTestData\UzdevumuParvaldnieksTestData.csproj" />
   </ItemGroup>
 
 </Project>
