@@ -1,0 +1,20 @@
+﻿@using UzdevumuParvaldnieksKlases
+@model Uzdevums
+
+<h1>Dzēst uzdevumu</h1>
+<p>Vai tiešām dzēst šo uzdevumu?</p>
+
+<dl class="row">
+
+
+    <dt class="col-sm-2">Nosaukums</dt>
+    <dd class="col-sm-10">@Model.Nosaukums</dd>
+
+    <dt class="col-sm-2">Apraksts</dt>
+    <dd class="col-sm-10">@Model.Apraksts</dd>
+</dl>
+
+<form asp-action="Delete" asp-route-id="@Model.ID" method="post">
+    <button type="submit" class="btn btn-danger">Dzēst</button>
+    <a asp-action="Index" class="btn btn-secondary">Atcelt</a>
+</form>

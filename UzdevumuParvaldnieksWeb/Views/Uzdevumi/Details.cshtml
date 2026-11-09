@@ -1,0 +1,16 @@
+﻿@using UzdevumuParvaldnieksKlases
+@model Uzdevums
+
+<h1>Uzdevuma detaļas</h1>
+
+<dl class="row">
+
+    <dt class="col-sm-2">Nosaukums</dt>
+    <dd class="col-sm-10">@Model.Nosaukums</dd>
+
+    <dt class="col-sm-2">Apraksts</dt>
+    <dd class="col-sm-10">@Model.Apraksts</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">Labot</a>
+<a asp-action="Index" class="btn btn-secondary">Atpakaļ</a>

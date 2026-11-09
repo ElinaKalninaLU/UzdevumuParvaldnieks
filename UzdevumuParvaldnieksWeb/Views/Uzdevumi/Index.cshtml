@@ -1,0 +1,42 @@
+﻿@using UzdevumuParvaldnieksKlases
+@model IEnumerable<Uzdevums>
+
+<h1>Uzdevumu saraksts</h1>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Pievienot uzdevumu</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nosaukums</th>
+            <th>Apraksts</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nosaukums</td>
+                <td>@item.Apraksts</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Labot</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Detaļas</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Dzēst</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

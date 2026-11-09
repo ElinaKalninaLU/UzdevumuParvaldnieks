@@ -5,5 +5,7 @@
   <Project Path="UzdevumuParvaldnieksKonsole/UzdevumuParvaldnieksKonsole.csproj" />
   <Project Path="UzdevumuParvaldnieksMAUIApp/UzdevumuParvaldnieksMAUIApp.csproj" Id="e965f0f4-653b-4785-96d0-931fa9e52a9a" />
   <Project Path="UzdevumuParvaldnieksTestData/UzdevumuParvaldnieksTestData.csproj" Id="336d6631-3f24-458e-b895-161fd82be1b1" />
+  <Project Path="UzdevumuParvaldnieksWeb/UzdevumuParvaldnieksWeb.csproj" Id="1adf79b9-e8f0-4f68-98a4-322abdc56c60" />
   <Project Path="UzdevumuParvaldnieksWebAPI/UzdevumuParvaldnieksWebAPI.csproj" Id="eb57451e-71ae-4b78-8072-9821603e7cde" />
+  <Project Path="WebStudenti/WebStudenti.csproj" Id="db1328c2-452b-4fc5-b4f4-e67cbe960c5b" />
 </Solution>

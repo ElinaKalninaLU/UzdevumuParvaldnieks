@@ -1,0 +1,24 @@
+﻿@using UzdevumuParvaldnieksKlases
+@model Uzdevums
+
+<h1>Jauns uzdevums</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+    <div class="mb-3">
+        <label asp-for="Nosaukums" class="form-label"></label>
+        <input asp-for="Nosaukums" class="form-control" />
+        <span asp-validation-for="Nosaukums" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Apraksts" class="form-label"></label>
+        <textarea asp-for="Apraksts" class="form-control"></textarea>
+        <span asp-validation-for="Apraksts" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Izveidot</button>
+    <a asp-action="Index" class="btn btn-secondary">Atpakaļ</a>
+</form>
